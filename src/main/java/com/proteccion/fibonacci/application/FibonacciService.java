@@ -4,7 +4,6 @@ import com.proteccion.fibonacci.core.dao.FibonacciSequenceRepository;
 import com.proteccion.fibonacci.core.interfaces.IFibonacciService;
 import com.proteccion.fibonacci.core.models.FibonacciSequence;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.math.BigInteger;
@@ -76,7 +75,7 @@ public class FibonacciService implements IFibonacciService {
         return digits;
     }
 
-    private List<BigInteger> generateFibonacciSequence(List<Integer> initialNumbers, int count) {
+    public List<BigInteger> generateFibonacciSequence(List<Integer> initialNumbers, int count) {
         List<BigInteger> series = new ArrayList<>();
         if (count <= 0) {
             return series;
